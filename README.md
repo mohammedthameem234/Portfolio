@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Portfolio Responsive Complete
 ## [Watch it on youtube](https://youtu.be/AKNvTxWOdKw)
 ### Portfolio Responsive Complete
@@ -12,3 +13,7 @@
 
 ![preview img](/preview.png)
 
+=======
+# Portfolio
+My Portfolio 
+>>>>>>> aef6451a2938712c35e149782c20a1f74a9dcd28
