@@ -7,11 +7,11 @@
   --font-semi: 600;
   /*===== Colors =====*/
   --hue-color: 224;
-  --first-color: hsl(var(--hue-color), 89%, 60%);
+  --first-color: #FF9500;
   --first-color-lighten: hsl(var(--hue-color), 89%, 96%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
   --light-gray: #f7fafc;
-  --border-gray: #e2e8f0;
+  --border-gray: #2D2D2D;
   
   /*===== Fonts and Typography =====*/
   --body-font: "Poppins", sans-serif;
@@ -46,7 +46,8 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  color: var(--second-color);
+  color: #FFFFFF;
+  background-color: #0F0F0F;
 }
 
 h1, h2, p {
@@ -96,7 +97,7 @@ img {
 }
 
 .section-alt {
-  background-color: var(--first-color-lighten);
+  background-color: #0F0F0F;
 }
 
 /*===== LAYOUT =====*/
@@ -115,7 +116,7 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
+  background-color: #0F0F0F;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
@@ -136,7 +137,7 @@ img {
   width: 80%;
   height: 100%;
   padding: 2rem;
-  background-color: var(--second-color);
+  background-color: #0F0F0F;
   transition: 0.5s;
 }
 
@@ -157,11 +158,11 @@ img {
   background-color: var(--first-color);
 }
 .nav__logo {
-  color: var(--second-color);
+  color: #FFFFFF;
   font-size: 1.1rem; /* approx 18px */
 }
 .nav__toggle {
-  color: var(--second-color);
+  color: #FFFFFF;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -231,7 +232,7 @@ img {
 .home__title-job {
   font-size: clamp(1.125rem, 4vw, 3rem); /* 18px -> 48px */
   display: block;
-  color: var(--second-color);
+  color: #FFFFFF;
   margin-bottom: 0; /* Remove bottom margin, handled by action container margin */
 }
 .home__title-color {
@@ -271,7 +272,7 @@ img {
 .home__social-icon {
   width: max-content;
   font-size: 1.25rem; /* ~20px */
-  color: var(--second-color);
+  color: #FFFFFF;
   margin: 0 0.5rem; /* ~8px gap */
 }
 .home__social-icon:hover {
@@ -370,7 +371,7 @@ img {
 .contact__form-wrapper {
   width: 100%;
   max-width: 600px;
-  background-color: var(--light-gray);
+  background-color: #0F0F0F;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
@@ -383,7 +384,7 @@ img {
 .contact__label {
   font-size: 0.875rem;
   font-weight: 700;
-  color: var(--second-color);
+  color: #FFFFFF;
   margin-bottom: 0.5rem;
   display: block;
 }
@@ -396,7 +397,7 @@ img {
   border: 1.5px solid var(--border-gray);
   outline: none;
   margin-bottom: 1.5rem;
-  background-color: #fff;
+  background-color: #0F0F0F;
   transition: 0.3s;
 }
 .contact__input:focus {
@@ -431,7 +432,7 @@ textarea.contact__input {
 
 /* ===== FOOTER =====*/
 .footer {
-  background-color: var(--second-color);
+  background-color: #0F0F0F;
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
@@ -519,34 +520,31 @@ textarea.contact__input {
   } 
   
   /* Desktop Typography - Exact Specs */
-  .home__title-hi { 
-      /* Font size handled by clamp */
-      font-weight: 700;
-      color: var(--second-color); /* Dark Navy */
-      line-height: 1.2;
-      margin-bottom: 0.5rem; /* 8px */ 
-  }
-  
-  .home__title-intro { 
-      /* Font size handled by clamp */
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 0.5rem; /* 8px */ 
-      color: var(--second-color); /* Dark Navy */
-  }
-  /* Target the span inside for blue color */
+    .home__title-hi {
+        /* Font size handled by clamp */
+        font-weight: 700;
+        color: #FFFFFF; /* Dark Navy */
+        line-height: 1.2;
+        margin-bottom: 0.5rem; /* 8px */
+    }  
+    .home__title-intro {
+        /* Font size handled by clamp */
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 0.5rem; /* 8px */
+        color: #FFFFFF; /* Dark Navy */
+    }  /* Target the span inside for blue color */
   .home__title-intro span {
       color: var(--first-color); /* Blue */
   }
   
-  .home__title-job { 
-      /* Font size handled by clamp */
-      font-weight: 700;
-      color: var(--second-color); /* Dark Navy */
-      line-height: 1.2;
-      margin-bottom: 2.5rem; /* 40px before button */ 
-  }
-  
+    .home__title-job {
+        /* Font size handled by clamp */
+        font-weight: 700;
+        color: #FFFFFF; /* Dark Navy */
+        line-height: 1.2;
+        margin-bottom: 2.5rem; /* 40px before button */
+    }  
   .home__actions { 
       margin-top: 0; 
       width: auto;
@@ -606,14 +604,14 @@ textarea.contact__input {
   .about__subtitle {
       font-size: 2.25rem; /* ~36px (36-40px requested) */
       font-weight: 700;
-      color: var(--second-color);
+      color: #FFFFFF;
       margin-bottom: 1.5rem; /* ~24px gap */
   }
   
   .about__text {
       font-size: 1rem; /* 16px */
       line-height: 1.6;
-      color: var(--second-color);
+      color: #FFFFFF;
   }
 }
 
