@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-responsive",
+  "version": "1.0.0",
+  "description": "Responsive portfolio website",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "portfolio",
+    "responsive",
+    "web"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.5"
+  }
+}
