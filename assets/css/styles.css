@@ -397,7 +397,8 @@ img {
   border: 1.5px solid var(--border-gray);
   outline: none;
   margin-bottom: 1.5rem;
-  background-color: #0F0F0F;
+  background-color: #0F0F0F; /* Reverted background to original dark color */
+  color: #ffffff; /* Text color remains white as requested */
   transition: 0.3s;
 }
 .contact__input:focus {

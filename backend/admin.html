@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Messages</title>
+    <link rel="stylesheet" href="../assets/css/styles.css"> <!-- Link to existing styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0F0F0F;
+            color: #FFFFFF;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            background-color: #1A1A1A;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 1000px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #FF9500;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        #login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 400px;
+            margin: 0 auto 30px auto;
+        }
+        #login-form input[type="text"],
+        #login-form input[type="password"] {
+            padding: 12px;
+            border: 1px solid #2D2D2D;
+            border-radius: 5px;
+            background-color: #0F0F0F;
+            color: #FFFFFF;
+        }
+        #login-form button {
+            padding: 12px 20px;
+            background-color: #FF9500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #login-form button:hover {
+            opacity: 0.9;
+        }
+        #messages-section {
+            display: none; /* Hidden until logged in */
+            width: 100%;
+        }
+        .message-card {
+            background-color: #0F0F0F;
+            border: 1px solid #2D2D2D;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .message-card h3 {
+            color: #FF9500;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .message-card p {
+            margin: 5px 0;
+        }
+        .message-card strong {
+            color: #CCCCCC;
+        }
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #2D2D2D;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #FF9500;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #1A1A1A;
+        }
+        tr:nth-child(odd) {
+            background-color: #0F0F0F;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Panel - Contact Messages</h1>
+
+        <div id="login-section">
+            <form id="login-form">
+                <input type="text" id="admin-username" placeholder="Username" required>
+                <input type="password" id="admin-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p id="login-error" class="error-message hidden"></p>
+            </form>
+        </div>
+
+        <div id="messages-section" class="hidden">
+            <h2>Received Messages</h2>
+            <div id="messages-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Subject</th>
+                            <th>Message</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Messages will be loaded here by JavaScript -->
+                    </tbody>
+                </table>
+                <p id="no-messages" class="hidden">No messages received yet.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
