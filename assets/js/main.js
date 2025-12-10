@@ -1,3 +1,39 @@
+/*==================== TYPING ANIMATION ====================*/
+const typingText = document.getElementById('typing-text');
+if (typingText) {
+    const fullText = "Hi, I am ";
+    const nameText = "Mohammed Thameem";
+    const completeText = fullText + nameText;
+    let currentIndex = 0;
+    let typingSpeed = 80;
+    
+    function typeText() {
+        if (!typingText) return;
+        
+        if (currentIndex < completeText.length) {
+            let textToShow = completeText.substring(0, currentIndex + 1);
+            
+            // Add highlight class to the name part
+            if (currentIndex >= fullText.length) {
+                const namePart = nameText.substring(0, currentIndex - fullText.length + 1);
+                textToShow = fullText + '<span class="home__title-highlight">' + namePart + '</span>';
+                typingText.innerHTML = textToShow;
+            } else {
+                typingText.textContent = textToShow;
+            }
+            
+            currentIndex++;
+            setTimeout(typeText, typingSpeed);
+        } else {
+            // Animation complete - keep the text with highlight
+            typingText.innerHTML = fullText + '<span class="home__title-highlight">' + nameText + '</span>';
+        }
+    }
+    
+    // Start typing animation when page loads
+    setTimeout(typeText, 500);
+}
+
 /*==================== BOTTOM NAVIGATION ====================*/
 const bottomNavLinks = document.querySelectorAll('.bottom-nav__link');
 
