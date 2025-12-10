@@ -350,6 +350,7 @@ img {
   mix-blend-mode: normal;
   object-fit: cover;
   transform-origin: center center;
+  clip-path: url(#blobClip);
 }
 
 /*===== EXPERIENCE SECTION =====*/
