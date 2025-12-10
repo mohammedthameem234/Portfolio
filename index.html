@@ -9,183 +9,304 @@
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>Portfolio website complete</title>
+        <title>Mohammed Thameem - Full-Stack Developer Portfolio</title>
     </head>
     <body>
         <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Thameem</a>
+        <header class="header">
+            <div class="header__container container">
+                <div class="open-to-work">
+                    <span class="status-dot"></span>
+                    <span>Open to work</span>
                 </div>
-
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
+                <a href="#" class="download-cv-btn">Download CV</a>
+            </div>
         </header>
 
-        <main class="l-main">
-            <!--===== HOME =====-->
+        <main class="main">
+            <!--===== HOME/HERO SECTION =====-->
             <section class="home section" id="home">
-                <div class="home__container bd-grid">
+                <div class="home__container container">
                     <div class="home__content">
-                        <div class="home__data">
+                        <div class="home__intro">
+                            <span class="home__label">Introduction</span>
                             <h1 class="home__title">
-                                <span class="home__title-hi">Hi,</span>
-                                <span class="home__title-intro">I'am <span class="home__title-color">Thameem</span></span>
-                                <span class="home__title-job">Full-Stack Developer</span>
+                                Hi , I'am <span class="home__title-highlight">Mohammed Thameem</span>
                             </h1>
+                            <p class="home__description">
+                                "My passion lies in layers of complexity, yet chooses the purest path to deliver a seamless, end-to-end user experience."
+                            </p>
+                            
+                            <div class="home__services">
+                                <span class="home__service-tag">Web Development</span>
+                                <span class="home__service-tag">UI Design</span>
+                                <span class="home__service-tag">Full-Stack Development</span>
+                            </div>
+
+                            <div class="home__stats">
+                            </div>
                         </div>
 
-                        <div class="home__img">
-                            <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <mask id="mask0" mask-type="alpha">
-                                    <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                                    <image class="home__blob-img" preserveAspectRatio="xMidYMid slice" href="assets/img/IMG-20251117-WA0225-removebg-preview.png"/>
-                                </g>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <!-- Moved Button and Socials outside home__content -->
-                    <div class="home__actions">
-                        <a href="#" class="button">Contact</a>
-                        
-                        <div class="home__social">
-                            <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                            <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
-                            <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                        <div class="home__image">
+                            <div class="home__img-wrapper">
+                                <div class="gradient-bg"></div>
+                                <div class="home__img">
+                                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <defs>
+                                            <linearGradient id="blobGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" style="stop-color:#9D4EDD;stop-opacity:1" />
+                                                <stop offset="50%" style="stop-color:#C77DFF;stop-opacity:1" />
+                                                <stop offset="100%" style="stop-color:#7B2CBF;stop-opacity:1" />
+                                            </linearGradient>
+                                        </defs>
+                                        <mask id="mask0" mask-type="alpha">
+                                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                                        </mask>
+                                        <g mask="url(#mask0)">
+                                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" fill="url(#blobGradient)"/>
+                                            <image class="home__blob-img" x="0" y="0" width="479" height="467" preserveAspectRatio="xMidYMid meet" href="assets/img/IMG-20251117-WA0225-removebg-preview.png"/>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!--===== ABOUT =====-->
-            <section class="about section section-alt" id="about">
-                <h2 class="section-title">About</h2>
-
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/IMG-20251117-WA0225.jpg" alt="">
-                    </div>
+            <!--===== EXPERIENCE SECTION =====-->
+            <section class="experience section" id="experience">
+                <div class="experience__container container">
+                    <h2 class="section__title">Experiences</h2>
+                    <p class="section__subtitle">I will offer more than just a place to work - it's a space designed to reflect your unique style and inspiration</p>
                     
-                    <div class="about__text-content">
-                        <h2 class="about__subtitle">I'am Mohammed Thameem </h2>
-                        <p class="about__text">I am an IT student with a strong passion for full‑stack development, where I enjoy building complete solutions from front‑end design to back‑end logic. My curiosity drives me to explore new technologies and frameworks, while my proficiency in English helps me communicate ideas clearly and collaborate effectively. I aim to grow as a versatile developer who can craft impactful projects and contribute meaningfully to the tech community.</p>           
-                    </div>                                   
+                    <div class="experience__list">
+                        <div class="experience__item">
+                            <div class="experience__header">
+                                <h3 class="experience__title">Full-Stack Developer</h3>
+                                <span class="experience__company">Company Name</span>
+                            </div>
+                            <span class="experience__period">2023 - Present</span>
+                            <p class="experience__description">Developed and maintained web applications using modern technologies. Built complete solutions from front-end design to back-end logic.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <!--===== SKILLS =====-->
+            <!--===== SELECTED WORKS SECTION =====-->
+            <section class="works section" id="works">
+                <div class="works__container container">
+                    <h2 class="section__title">Selected Work</h2>
+                    
+                    <div class="works__grid">
+                        <div class="work__item">
+                            <div class="work__category">Website Design</div>
+                            <h3 class="work__title">Flowstate</h3>
+                            <p class="work__date">May 2024</p>
+                            <p class="work__description">Redesigned the online shopping experience for a mid-sized fashion brand. Focused on creating an elegant, mobile-first design with seamless navigation.</p>
+                        </div>
+                        <div class="work__item">
+                            <div class="work__category">Web Application</div>
+                            <h3 class="work__title">E-Commerce Platform</h3>
+                            <p class="work__date">March 2024</p>
+                            <p class="work__description">Built a full-stack e-commerce platform with React and Node.js, featuring real-time inventory management and secure payment processing.</p>
+                        </div>
+                        <div class="work__item">
+                            <div class="work__category">UI/UX Design</div>
+                            <h3 class="work__title">Dashboard Design</h3>
+                            <p class="work__date">January 2024</p>
+                            <p class="work__description">Created an intuitive admin dashboard with data visualization and user management features.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== ABOUT SECTION =====-->
+            <section class="about section" id="about">
+                <div class="about__container container">
+                    <h2 class="section__title">About Me</h2>
+                    <p class="section__subtitle">Behind every great application is an even greater story</p>
+                    
+                    <div class="about__content">
+                        <div class="about__text">
+                            <p class="about__paragraph">
+                                I am an IT student with a strong passion for full‑stack development, where I enjoy building complete solutions from front‑end design to back‑end logic. My curiosity drives me to explore new technologies and frameworks, while my proficiency in English helps me communicate ideas clearly and collaborate effectively.
+                            </p>
+                            <p class="about__paragraph">
+                                I aim to grow as a versatile developer who can craft impactful projects and contribute meaningfully to the tech community.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== SKILLS/TECH STACK SECTION =====-->
             <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
-
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">As an IT student passionate about full-stack development, I’ve built a solid foundation in both front-end and back-end technologies. I enjoy crafting responsive, user-friendly interfaces and writing clean, efficient code that powers dynamic web applications. My strengths lie in combining design with logic to deliver seamless digital experiences.</p>
-                    </div>
+                <div class="skills__container container">
+                    <h2 class="section__title">Tech Stack</h2>
+                    <p class="section__subtitle">Technologies and tools I work with</p>
                     
-                    <div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__html">
+                    <div class="skills__grid">
+                        <div class="skill__item">
+                            <i class='bx bxl-html5 skill__icon'></i>
+                            <h3 class="skill__name">HTML5</h3>
+                            <p class="skill__description">Semantic markup and modern web standards</p>
+                        </div>
+                        <div class="skill__item">
+                            <i class='bx bxl-css3 skill__icon'></i>
+                            <h3 class="skill__name">CSS3</h3>
+                            <p class="skill__description">Styling and responsive design</p>
+                        </div>
+                        <div class="skill__item">
+                            <i class='bx bxl-javascript skill__icon'></i>
+                            <h3 class="skill__name">JavaScript</h3>
+                            <p class="skill__description">Interactive web applications</p>
+                        </div>
+                        <div class="skill__item">
+                            <i class='bx bxl-react skill__icon'></i>
+                            <h3 class="skill__name">React</h3>
+                            <p class="skill__description">Component-based UI development</p>
+                        </div>
+                        <div class="skill__item">
+                            <i class='bx bxl-nodejs skill__icon'></i>
+                            <h3 class="skill__name">Node.js</h3>
+                            <p class="skill__description">Server-side JavaScript runtime</p>
+                        </div>
+                        <div class="skill__item">
+                            <i class='bx bxl-mongodb skill__icon'></i>
+                            <h3 class="skill__name">MongoDB</h3>
+                            <p class="skill__description">NoSQL database management</p>
+                        </div>
+                        <div class="skill__item">
+                            <i class='bx bxl-python skill__icon'></i>
+                            <h3 class="skill__name">Python</h3>
+                            <p class="skill__description">Backend development and automation</p>
+                        </div>
+                        <div class="skill__item">
+                            <i class='bx bxl-git skill__icon'></i>
+                            <h3 class="skill__name">Git</h3>
+                            <p class="skill__description">Version control and collaboration</p>
+                        </div>
+                    </div>
 
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
+                    <div class="skills__languages">
+                        <h3 class="subsection-title">Languages</h3>
+                        <div class="language-item">
+                            <span class="language-name">English</span>
+                            <div class="language-bar">
+                                <div class="language-progress" style="width: 100%"></div>
                             </div>
                         </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">80%</span>
+                        <div class="language-item">
+                            <span class="language-name">Spanish</span>
+                            <div class="language-bar">
+                                <div class="language-progress" style="width: 75%"></div>
                             </div>
                         </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
+                        <div class="language-item">
+                            <span class="language-name">French</span>
+                            <div class="language-bar">
+                                <div class="language-progress" style="width: 50%"></div>
                             </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills__education">
+                        <h3 class="subsection-title">Education & Certificates</h3>
+                        <div class="education-item">
+                            <h4 class="education-institution">Your University</h4>
+                            <p class="education-degree">Bachelor of Science in Information Technology</p>
+                            <p class="education-year">2020 - 2024</p>
+                        </div>
+                        <div class="education-item">
+                            <h4 class="education-institution">Certification Provider</h4>
+                            <p class="education-degree">Full-Stack Web Development Certificate</p>
+                            <p class="education-year">2023</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!--===== CONTACT =====-->
+            <!--===== CONTACT SECTION =====-->
             <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
+                <div class="contact__container container">
+                    <h2 class="section__title">Contact For Work</h2>
+                    
+                    <div class="contact__content">
+                        <div class="contact__info">
+                            <div class="contact__item">
+                                <i class='bx bx-envelope contact__icon'></i>
+                                <span>mohammedthameem0806@gmail.com</span>
+                            </div>
+                            <div class="contact__item">
+                                <i class='bx bx-phone contact__icon'></i>
+                                <span>+91 9361900720</span>
+                            </div>
+                            <div class="contact__item">
+                                <i class='bx bx-map contact__icon'></i>
+                                <span>Vellore</span>
+                            </div>
+                            <div class="contact__social">
+                                <a href="http://linkedin.com/in/mohammed-thameem-c-a-70161a2a5" target="_blank" rel="noopener noreferrer" class="contact__social-link"><i class='bx bxl-linkedin'></i></a>
+                                <a href="https://github.com/mohammedthameem786" target="_blank" rel="noopener noreferrer" class="contact__social-link"><i class='bx bxl-github'></i></a>
+                                <a href="#" class="contact__social-link"><i class='bx bxl-behance'></i></a>
+                            </div>
+                        </div>
 
-                <div class="contact__container bd-grid">
-                    <div class="contact__form-wrapper">
-                        <form action="" class="contact__form">
-                            <label for="contact-name" class="contact__label">Name</label>
-                            <input type="text" id="contact-name" placeholder="Name" class="contact__input">
-                            
-                            <label for="contact-email" class="contact__label">Email</label>
-                            <input type="mail" id="contact-email" placeholder="Email" class="contact__input">
-                            
-                            <label for="contact-message" class="contact__label">Message</label>
-                            <textarea name="" id="contact-message" cols="0" rows="10" class="contact__input"></textarea>
-                            
-                            <input type="button" value="Send" class="contact__button button">
+                        <form class="contact__form" id="contact-form">
+                            <div class="contact__input-group">
+                                <label for="contact-name" class="contact__label">Your Email</label>
+                                <input type="email" id="contact-email" class="contact__input" placeholder="your.email@example.com" required>
+                            </div>
+                            <div class="contact__input-group">
+                                <label for="contact-phone" class="contact__label">Your Phone</label>
+                                <input type="tel" id="contact-phone" class="contact__input" placeholder="+91 12345 67890" pattern="[0-9]{10}" maxlength="10">
+                            </div>
+                            <div class="contact__input-group">
+                                <label for="contact-message" class="contact__label">Message</label>
+                                <textarea id="contact-message" class="contact__input contact__textarea" rows="5" placeholder="Tell us about your project..." required></textarea>
+                            </div>
+                            <button type="submit" class="contact__button">Get Started</button>
                         </form>
                     </div>
                 </div>
             </section>
         </main>
 
+        <!--===== BOTTOM NAVIGATION =====-->
+        <nav class="bottom-nav">
+            <a href="#home" class="bottom-nav__link active">
+                <i class='bx bx-home'></i>
+                <span>Home</span>
+            </a>
+            <a href="#experience" class="bottom-nav__link">
+                <i class='bx bx-briefcase'></i>
+                <span>Experience</span>
+            </a>
+            <a href="#works" class="bottom-nav__link">
+                <i class='bx bx-code-alt'></i>
+                <span>Works</span>
+            </a>
+            <a href="#about" class="bottom-nav__link">
+                <i class='bx bx-user'></i>
+                <span>About</span>
+            </a>
+            <a href="#skills" class="bottom-nav__link">
+                <i class='bx bx-code-curly'></i>
+                <span>Skills</span>
+            </a>
+            <a href="#contact" class="bottom-nav__link">
+                <i class='bx bx-envelope'></i>
+                <span>Contact</span>
+            </a>
+        </nav>
+
         <!--===== FOOTER =====-->
         <footer class="footer">
-            <p class="footer__title">Mohammed Thameem</p>
-            <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+            <div class="footer__container container">
+                <p class="footer__copy">&copy; 2024 Mohammed Thameem. All rights reserved.</p>
             </div>
-            <p class="footer__copy">&#169; MTcode. All rights reserved</p>
         </footer>
-
 
         <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>
