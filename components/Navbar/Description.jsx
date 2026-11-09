@@ -13,9 +13,9 @@ const Description = () => {
       <div className="pt-20 pb-6 lg:hidden">
         <div className="text-3xl text-fg font-extrabold leading-7">
           <Trail open={open}>
-            <span>We build epic realtime</span>
-            <span>interactive experience to</span>
-            <span>blow people's minds</span>
+            <span>Crafting seamless</span>
+            <span>full-stack applications</span>
+            <span>& digital experiences</span>
           </Trail>
         </div>
       </div>
@@ -24,9 +24,9 @@ const Description = () => {
       <div className="w-full items-start justify-center hidden lg:flex pt-11 pb-10">
         <div className="text-[2.75rem] w-2/4 text-fg font-[500] leading-10">
           <Trail open={open}>
-            <span>I build epic realtime</span>
-            <span>interactive experience to</span>
-            <span>blow people's minds</span>
+            <span>Crafting seamless</span>
+            <span>full-stack applications</span>
+            <span>& digital experiences</span>
           </Trail>
         </div>
       </div>

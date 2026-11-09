@@ -2,42 +2,45 @@ import React from 'react'
 
 const SERVICES = [
   {
-    title: 'Websites and App Development',
+    title: 'Full-Stack Engineering',
     body:
-      'From idea to launch, full cycle development including frontend, backend, and deployment.',
+      'Architecting end-to-end web applications, resilient RESTful APIs, and secure full-cycle production deployments.',
   },
   {
-    title: 'AI Automation Systems',
+    title: 'Modern Web Development',
     body:
-      'Designing and integrating AI Automation to optimize workflows, reduce manual effort, and enhance system intelligence.',
+      'Developing semantic, high-performance, and responsive web applications with modern frameworks and fluid design systems.',
   },
   {
-    title: 'UI/UX Design',
+    title: 'UI/UX & Product Design',
     body:
-      'Minimal, clean, and user-focused interfaces aligned with modern standards.',
+      'Designing clean, intuitive, and accessible user interfaces focused on typography, micro-interactions, and visual elegance.',
   },
   {
-    title: 'Brand Identity',
+    title: 'Backend & Cloud Systems',
     body:
-      'Creating complete visual identities that define and elevate digital products.',
+      'Building robust server-side runtimes, relational and NoSQL database schemas, and reliable communication services.',
   },
 ]
 
 const SubHeader = () => {
   return (
-    <div className='relative md:absolute md:top-1/5 left-0 md:left-1/2 w-full md:-translate-x-1/2 md:mt-40 z-10 flex flex-col md:items-start items-center px-5 md:px-0'>
-      <div className='w-full md:w-1/2 text-base md:text-2xl flex flex-col gap-3 md:gap-4 leading-relaxed md:leading-snug text-center md:text-left'>
-        <p>
-          Abdelrahman Elfekky is an AI Engineer and Data Analyst building real-world digital systems across web, mobile, and AI.
+    <div className='w-full z-10 flex flex-col items-center lg:items-start text-center lg:text-left'>
+      <div className='w-full text-base sm:text-lg lg:text-xl flex flex-col gap-4 leading-relaxed'>
+        <p className="font-semibold text-fg text-lg sm:text-xl lg:text-2xl leading-snug">
+          &ldquo;Navigating through layers of complexity, I craft clean, intuitive solutions to deliver seamless, end-to-end digital experiences.&rdquo;
         </p>
-        <p>
-          He integrates AI Automation into every product, engineering complete ecosystems instead of standalone tools.
+        <p className="text-sm sm:text-base text-fg-muted leading-relaxed">
+          I am an Information Technology student with a deep passion for full‑stack engineering, building complete solutions from interactive front‑end design to resilient back‑end logic. Driven by curiosity, I actively explore emerging frameworks and modern technologies, communicating complex ideas with clarity and collaborating effectively across teams.
+        </p>
+        <p className="text-sm sm:text-base text-fg-muted leading-relaxed">
+          I aim to grow as a versatile software engineer who crafts impactful applications and contributes meaningfully to the developer community.
         </p>
       </div>
 
-      <div className='about-inline-services w-full md:w-1/2 mt-8 md:mt-12 h-auto md:h-[36vh]'>
+      <div className='about-inline-services w-full mt-8 lg:mt-10'>
         <div className='about-inline-services__head'>
-          <span className='about-inline-services__label'>SERVICES</span>
+          <span className='about-inline-services__label'>CORE DISCIPLINES &amp; SERVICES</span>
         </div>
         <div className='about-inline-services__grid'>
           {SERVICES.map((service) => (

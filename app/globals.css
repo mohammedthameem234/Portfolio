@@ -243,16 +243,7 @@ html {
   opacity: 0.25;
 }
 
-/* End-of-hero indicator line */
-.hero-end-line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 6px;
-  background-color: var(--color-text);
-  z-index: 20;
-}
+
 
 #hero-img {
   position: absolute;
@@ -394,7 +385,6 @@ html {
 .about-inline-services__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-top: 1.5px solid var(--color-border);
   gap: 1.2vw;
   height: 100%;
   grid-auto-rows: 1fr;
@@ -1524,3 +1514,153 @@ html {
   }
 }
 
+
+
+/* ── HERO 3D PORTRAIT & TEXT DEPTH (REFERENCE MATCH) ── */
+#hero-heading {
+  position: absolute !important;
+  top: 48% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: auto !important;
+  max-width: 98vw !important;
+  font-size: min(20vw, 15rem) !important;
+  letter-spacing: -0.06em !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  z-index: 5 !important;
+  user-select: none !important;
+}
+
+#hero-img {
+  position: absolute !important;
+  top: auto !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+  height: 84vh !important;
+  max-height: 84vh !important;
+  max-width: 92vw !important;
+  z-index: 10 !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  pointer-events: none !important;
+}
+
+#hero-img img {
+  width: auto !important;
+  height: 100% !important;
+  max-height: 84vh !important;
+  object-fit: contain !important;
+  object-position: bottom center !important;
+  filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.45)) !important;
+}
+
+#hero-stroke-1 {
+  z-index: 11 !important;
+}
+
+#hero-stroke-2 {
+  z-index: 4 !important;
+}
+
+/* ── CONTACT SECTION CLEAN RESPONSIVENESS ── */
+#contact-section {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 100vh !important;
+  position: relative !important;
+  overflow: visible !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding: 8rem 5vw 6rem 5vw !important;
+  gap: 1.5rem !important;
+}
+
+/* ── TABLET & MOBILE BREAKPOINTS ── */
+@media (max-width: 1024px) {
+  #hero-heading {
+    top: 48% !important;
+    font-size: clamp(3.8rem, 18vw, 11rem) !important;
+  }
+  #hero-img {
+    height: 76vh !important;
+    max-height: 76vh !important;
+  }
+  #hero-img img {
+    max-height: 76vh !important;
+  }
+
+  /* Marquee ticker on tablet/mobile - no giant empty pinned gaps */
+  .Horizontal {
+    height: auto !important;
+    padding: 3rem 0 !important;
+    overflow: hidden !important;
+  }
+  .Horizontal .hs-sticky {
+    height: auto !important;
+    min-height: auto !important;
+    padding: 1rem 0 !important;
+  }
+  .Horizontal__text {
+    padding-left: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero-heading {
+    top: 48% !important;
+    font-size: clamp(3.2rem, 18vw, 6.5rem) !important;
+    letter-spacing: -0.04em !important;
+    white-space: nowrap !important;
+    flex-direction: row !important;
+  }
+
+  #hero-img {
+    height: 72vh !important;
+    max-height: 520px !important;
+  }
+
+  #hero-img img {
+    max-height: 520px !important;
+  }
+
+  #contact-section {
+    padding: 5rem 5vw 4rem 5vw !important;
+    gap: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero-heading {
+    top: 48% !important;
+    font-size: clamp(2.8rem, 17.5vw, 4.8rem) !important;
+    letter-spacing: -0.04em !important;
+  }
+
+  #hero-img {
+    height: 68vh !important;
+    max-height: 480px !important;
+  }
+
+  #hero-img img {
+    max-height: 480px !important;
+  }
+
+  .Horizontal .heading-xl {
+    font-size: clamp(1.8rem, 9vw, 3.2rem) !important;
+  }
+}

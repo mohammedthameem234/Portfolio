@@ -41,7 +41,13 @@ const SmoothScroll = ({ children }) => {
 
     gsap.ticker.lagSmoothing(0);
 
+    // Refresh ScrollTrigger positions once DOM & images settle
+    const refreshTimer1 = setTimeout(() => ScrollTrigger.refresh(), 200);
+    const refreshTimer2 = setTimeout(() => ScrollTrigger.refresh(), 1000);
+
     return () => {
+      clearTimeout(refreshTimer1);
+      clearTimeout(refreshTimer2);
       lenis.destroy();
       if (typeof window !== "undefined" && window.__lenis === lenis) {
         delete window.__lenis;

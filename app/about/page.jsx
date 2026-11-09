@@ -8,7 +8,7 @@ const About = () => {
      <Navbar />
       <Scene/>
       <ScrollText />
-      <div className="absolute lg:text-[17rem] text-7xl font-extrabold tracking-widest bottom-0 right-1/2 translate-x-1/2 w-auto leading-none">SMATIK</div>
+      <div className="absolute lg:text-[17rem] text-7xl font-extrabold tracking-widest bottom-0 right-1/2 translate-x-1/2 w-auto leading-none">THAMEEM</div>
     </div>
   );
 };

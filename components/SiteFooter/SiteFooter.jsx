@@ -18,27 +18,6 @@ const Icon = ({ children }) => (
   </svg>
 );
 
-const InstagramIcon = () => (
-  <Icon>
-    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-  </Icon>
-);
-
-const TikTokIcon = () => (
-  <Icon>
-    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
-  </Icon>
-);
-
-const YoutubeIcon = () => (
-  <Icon>
-    <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
-    <path d="m10 15 5-3-5-3z" />
-  </Icon>
-);
-
 const LinkedinIcon = () => (
   <Icon>
     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -54,43 +33,26 @@ const GithubIcon = () => (
   </Icon>
 );
 
+const MailIcon = () => (
+  <Icon>
+    <rect width="20" height="16" x="2" y="4" rx="2" />
+    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+  </Icon>
+);
+
 const SiteFooter = () => {
   return (
     <footer id="main-footer">
       <div className="footer-top">
         <div className="footer-brand">
-          <h1 className="f-logo">ELFEKKY</h1>
+          <h1 className="f-logo">THAMEEM</h1>
           <p className="f-desc">
-            Elfekky builds more than digital products. <br />
-            He builds systems that think.
+            Mohammed Thameem crafts full-stack applications. <br />
+            Transforming complex systems into seamless digital experiences.
           </p>
           <div className="f-socials">
             <a
-              href="https://www.instagram.com/elfekkyy/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram"
-            >
-              <InstagramIcon />
-            </a>
-            <a
-              href="https://www.tiktok.com/@elfekkyy"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="TikTok"
-            >
-              <TikTokIcon />
-            </a>
-            <a
-              href="https://www.youtube.com/@Elfekki"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="YouTube"
-            >
-              <YoutubeIcon />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/abdelruhamanelfekky/"
+              href="http://linkedin.com/in/mohammed-thameem-c-a-70161a2a5"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
@@ -98,12 +60,18 @@ const SiteFooter = () => {
               <LinkedinIcon />
             </a>
             <a
-              href="https://github.com/AbdelruhmanAshraf"
+              href="https://github.com/mohammedthameem786"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
             >
               <GithubIcon />
+            </a>
+            <a
+              href="mailto:mohammedthameem0806@gmail.com"
+              aria-label="Email"
+            >
+              <MailIcon />
             </a>
           </div>
         </div>
@@ -111,28 +79,23 @@ const SiteFooter = () => {
           <div className="f-col">
             <h3>EXPLORE</h3>
             <a href="#projects-section">Projects</a>
-            <a href="#ventures">Ventures</a>
+            <a href="#experience">Experience &amp; Education</a>
+            <a href="#skills">Tech Stack</a>
             <a href="#contact-section">Get in touch</a>
+            <a href="/resume.pdf" download="MOHAMMED-THAMEEM-Resume.pdf">Download Resume</a>
           </div>
           <div className="f-col">
             <h3>CONTACT</h3>
-            <a href="mailto:abdelruhamanelfekky@gmail.com">
-              abdelruhamanelfekky@gmail.com
+            <a href="mailto:mohammedthameem0806@gmail.com">
+              mohammedthameem0806@gmail.com
             </a>
-            <a
-              href="https://wa.me/201080620024"
-              target="_blank"
-              rel="noreferrer"
-            >
-              WhatsApp: 010 8062 0024
-            </a>
-            <a href="tel:+201080620024">Phone: 010 8062 0024</a>
+            <span>Location: Vellore, Tamil Nadu, India</span>
           </div>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Elfekky. All rights reserved.</p>
-        <p>created by mtarif.com</p>
+        <p>© {new Date().getFullYear()} Mohammed Thameem. All rights reserved.</p>
+        <p>Built with Next.js, Three.js &amp; GSAP</p>
       </div>
     </footer>
   );

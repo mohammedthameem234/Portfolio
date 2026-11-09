@@ -11,15 +11,20 @@ const Header = () => {
 
   const [horizontal, api] = useSpring(() => ({ from: { transform: 'translateX(0%)' } }));
 
-  const horizontalCallback = open => api.start({ transform: `translateX(${open ? '20%' : '0%'})` });
+  const horizontalCallback = (isOpen) => {
+    if (typeof window !== "undefined" && window.innerWidth >= 1024) {
+      api.start({ transform: `translateX(${isOpen ? '5%' : '0%'})` });
+    }
+  };
+
   return (
-    <div className="w-full z-10 relative px-4 md:px-0 md:pl-6 font-semibold text-5xl sm:text-6xl md:text-[9rem] text-center md:text-left leading-[0.95] md:leading-none" style={{ letterSpacing: "-0.07em" }}>
+    <div className="w-full z-10 relative font-semibold text-4xl sm:text-6xl md:text-7xl lg:text-[6.5rem] xl:text-[8rem] text-center lg:text-left leading-[0.98] tracking-tight pb-4" style={{ letterSpacing: "-0.04em" }}>
       <Trail callback={horizontalCallback}>
-        <a.div className="flex justify-center md:justify-start flex-wrap md:flex-nowrap" style={horizontal}>
+        <a.div className="flex justify-center lg:justify-start flex-wrap lg:flex-nowrap" style={horizontal}>
           <div>Building&nbsp;</div>
           <div>Real&nbsp;</div>
         </a.div>
-        <div className="flex justify-center md:justify-start flex-wrap md:flex-nowrap">
+        <div className="flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
           <div>Digital&nbsp;</div>
           <div>Systems&nbsp;</div>
         </div>

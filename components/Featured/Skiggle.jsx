@@ -31,7 +31,7 @@ const Skiggle = () => {
 
   return (
     <svg
-      className="squigggle absolute top-[-10%] left-1/2 -translate-x-1/2 w-[120vw] h-full z-0"
+      className="squigggle pointer-events-none absolute top-[-10%] left-1/2 -translate-x-1/2 w-[120vw] h-full z-0 opacity-40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

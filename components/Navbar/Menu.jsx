@@ -1,16 +1,9 @@
 import { useSpring, a } from "@react-spring/web";
 import React, { useEffect, useRef, useState } from "react";
 
-// Real contact info — kept in sync with `Contact`, `SiteFooter`, and
-// `LetsTalk`. Update all four if these ever change.
-const EMAIL = "abdelruhamanelfekky@gmail.com";
-const WHATSAPP_URL = "https://wa.me/201080620024";
+const EMAIL = "mohammedthameem0806@gmail.com";
+const LINKEDIN_URL = "http://linkedin.com/in/mohammed-thameem-c-a-70161a2a5";
 
-// Smoothly scrolls to a section by id. Uses the active Lenis instance
-// (exposed by SmoothScroll on `window.__lenis`) when available, so the
-// motion is consistent with every other scroll on the site. Falls back to
-// the browser's native smooth scrollIntoView if Lenis isn't ready yet
-// (e.g. during SSR hydration).
 const scrollToSection = (id) => {
   if (typeof window === "undefined") return;
   const target = id === "top" ? 0 : document.getElementById(id);
@@ -52,13 +45,12 @@ const Menu = ({ open, onOutsideClick, onClose }) => {
   }));
   const [hidden, setHidden] = useState(true);
   useEffect(() => {
-
-    if(open == false){
+    if (open == false) {
       setTimeout(() => {
-        setHidden(false);}
-      , 500);
-    }else{
-      setHidden(true)
+        setHidden(false);
+      }, 500);
+    } else {
+      setHidden(true);
     }
 
     contentsApi.start({
@@ -72,20 +64,14 @@ const Menu = ({ open, onOutsideClick, onClose }) => {
       opacity: open ? 1 : 0,
       transform: open ? `rotate(0deg)` : `rotate(-20deg)`,
     });
-
   }, [open]);
 
-  // Every entry maps to a real section that already exists on the home
-  // page. The site is single-page, so these never navigate — they smooth
-  // scroll the user to the matching anchor through Lenis.
-  //
-  // `target: "top"` is a sentinel for "scroll to the very top of the
-  // document" (the hero) since the hero owns the first viewport without
-  // needing a separate offset.
   const navItems = [
     { label: "HOME", target: "top" },
     { label: "ABOUT", target: "about" },
+    { label: "SKILLS", target: "skills" },
     { label: "WORK", target: "projects-section" },
+    { label: "EXPERIENCE", target: "experience" },
     { label: "CONTACT", target: "contact-section" },
   ];
 
@@ -102,7 +88,6 @@ const Menu = ({ open, onOutsideClick, onClose }) => {
           className="absolute top-[4rem] right-0 w-[20rem] "
           ref={ref}
         >
-          {/* Site navigation — smooth scroll, never redirect */}
           <a.div
             className="rounded-xl bg-bg-alt text-fg flex flex-col font-Aeonik text-3xl p-8"
             style={contents}
@@ -122,9 +107,6 @@ const Menu = ({ open, onOutsideClick, onClose }) => {
             ))}
           </a.div>
 
-          {/* Get in touch — replaces the old newsletter form so the menu
-              actually reflects what the site offers. Both buttons reuse the
-              same handles already used in the Contact section and Footer. */}
           <a.div
             className="rounded-xl bg-bg-alt text-fg flex flex-col p-8 my-2"
             style={news}
@@ -144,13 +126,13 @@ const Menu = ({ open, onOutsideClick, onClose }) => {
                 <span aria-hidden="true">↗</span>
               </a>
               <a
-                href={WHATSAPP_URL}
+                href={LINKEDIN_URL}
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => onClose && onClose()}
                 className="flex items-center justify-between border-2 border-fg text-fg rounded-xl px-4 py-3 text-sm tracking-widest font-semibold transition-colors duration-200 hover:bg-accent-soft"
               >
-                <span>WHATSAPP</span>
+                <span>LINKEDIN</span>
                 <span aria-hidden="true">↗</span>
               </a>
             </div>

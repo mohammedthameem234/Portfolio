@@ -13,8 +13,8 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: 'ELFEKKY',
-  description: 'Personal portfolio',
+  title: 'Mohammed Thameem — Full-Stack Developer',
+  description: 'Personal portfolio of Mohammed Thameem, Full-Stack Developer building modern web applications, scalable APIs, and immersive digital systems.',
   icons: {
     icon: '/icon.png',
   },

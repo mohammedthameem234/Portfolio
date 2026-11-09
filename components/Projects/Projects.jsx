@@ -6,62 +6,56 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const PROJECTS = [
   {
-    name: "Population Analysis",
-    href: "https://github.com/AbdelruhmanAshraf/Population-Analysis",
-    kind: "GitHub",
+    name: "Flowstate Fashion",
+    role: "E-Commerce Experience • May 2025",
+    note: "A refined digital retail experience for modern apparel, engineered with fluid mobile-first navigation and a streamlined checkout flow.",
+    href: "https://github.com/mohammedthameem786",
+    kind: "Website Design",
   },
   {
-    name: "Titanic EDA",
-    href: "https://github.com/AbdelruhmanAshraf/Titanic-EDA",
-    kind: "GitHub",
+    name: "Full-Stack Commerce Platform",
+    role: "Web Application • March 2025",
+    note: "A production-grade e-commerce application powered by React and Node.js, featuring real-time inventory tracking and secure payment integration.",
+    href: "https://github.com/mohammedthameem786",
+    kind: "Web Application",
   },
   {
-    name: "Bank Decision Tree",
-    href: "https://github.com/AbdelruhmanAshraf/bank_decision_tree",
-    kind: "GitHub",
+    name: "Admin Analytics Dashboard",
+    role: "UI/UX & Systems • January 2025",
+    note: "An intuitive administration panel offering data visualization, user authorization workflows, and real-time CRM communication logs.",
+    href: "https://github.com/mohammedthameem786",
+    kind: "UI/UX Design",
   },
   {
-    name: "Screen Time Analysis",
-    href: "https://github.com/AbdelruhmanAshraf/screen-time-analysis",
-    kind: "GitHub",
-  },
-  {
-    name: "Weather Forecasting Using Python",
-    href: "https://github.com/AbdelruhmanAshraf/weather-forecasting-using-python",
-    kind: "GitHub",
-  },
-  {
-    name: "Flower Recognition",
-    href: "https://github.com/AbdelruhmanAshraf/Flower-Recognition",
-    kind: "GitHub",
-  },
-  {
-    name: "Elgana Platform",
-    href: "https://elgana.fit/",
-    kind: "Live",
+    name: "3D Immersive Portfolio",
+    role: "Next.js, Three.js & GSAP • 2026",
+    note: "A high-performance interactive developer portfolio featuring WebGL fluid simulation, 3D mouse parallax, and smooth Lenis scroll physics.",
+    href: "https://github.com/mohammedthameem786",
+    kind: "Interactive Web",
   },
 ];
 
-const VENTURES = [
+const EXPERIENCES = [
   {
-    name: "Rokn Podcast",
-    role: "Founder",
+    name: "Full-Stack Software Developer",
+    role: "Freelance & Independent Projects • 2023 - Present",
+    kind: "Experience",
     href: null,
-    kind: "Maintenance",
+    note: "Designing, building, and deploying modern web applications and APIs. Delivering complete client solutions from conception to production launch.",
   },
   {
-    name: "Dietin",
-    role: "CTO & AI Backend Developer",
-    href: "https://dietin.pro",
-    kind: "Live",
+    name: "C Abdul Hakeem College Of Engineering & Technology",
+    role: "B-Tech in Information Technology • 2023 - 2027",
+    kind: "Education",
+    href: null,
+    note: "Rigorous academic curriculum covering data structures, computer networks, database systems, and modern software engineering principles.",
   },
   {
-    name: "Wagha INC",
-    role: "Co-Founder",
+    name: "Full-Stack Web Development Certification",
+    role: "Accredited Certification Provider • 2023",
+    kind: "Certificate",
     href: null,
-    kind: "Active",
-    note:
-      "Digital solutions for businesses, from concept to execution, including branding, development, and AI powered systems.",
+    note: "Demonstrated technical proficiency in HTML5, CSS3, modern JavaScript (ES6+), React, Node.js, Express, and database management.",
   },
 ];
 
@@ -117,43 +111,55 @@ const Projects = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     const ctx = gsap.context(() => {
-      const rows = sectionRef.current.querySelectorAll(".pj-row");
-      gsap.from(rows, {
-        opacity: 0,
-        y: 60,
-        duration: 0.9,
-        stagger: 0.08,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          once: true,
-        },
-      });
+      const rows = sectionRef.current?.querySelectorAll(".pj-row");
+      if (rows && rows.length > 0) {
+        gsap.fromTo(
+          rows,
+          { opacity: 0.3, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            stagger: 0.05,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top 95%",
+              once: true,
+            },
+          }
+        );
+      }
 
-      const titles = sectionRef.current.querySelectorAll(".pj-title");
-      gsap.from(titles, {
-        opacity: 0,
-        y: 40,
-        duration: 1,
-        stagger: 0.15,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 85%",
-          once: true,
-        },
-      });
+      const titles = sectionRef.current?.querySelectorAll(".pj-title");
+      if (titles && titles.length > 0) {
+        gsap.fromTo(
+          titles,
+          { opacity: 0.4, y: 20 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            stagger: 0.1,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top 95%",
+              once: true,
+            },
+          }
+        );
+      }
     }, sectionRef.current);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <section id="projects-section" ref={sectionRef}>
+    <section id="projects-section" ref={sectionRef} className="w-full">
       <div className="pj-head">
-        <span className="pj-label">PROJECTS</span>
-        <h2 className="pj-title">selected work</h2>
+        <span className="pj-label">SELECTED WORK</span>
+        <h2 className="pj-title">featured projects</h2>
       </div>
 
       <ul className="pj-list">
@@ -162,13 +168,13 @@ const Projects = () => {
         ))}
       </ul>
 
-      <div id="ventures" className="pj-head pj-head--secondary">
-        <span className="pj-label">VENTURES</span>
-        <h2 className="pj-title">business &amp; ventures</h2>
+      <div id="experience" className="pj-head pj-head--secondary">
+        <span className="pj-label">EXPERIENCE &amp; EDUCATION</span>
+        <h2 className="pj-title">journey &amp; credentials</h2>
       </div>
 
       <ul className="pj-list">
-        {VENTURES.map((v, i) => (
+        {EXPERIENCES.map((v, i) => (
           <Row key={v.name} item={v} index={i} />
         ))}
       </ul>

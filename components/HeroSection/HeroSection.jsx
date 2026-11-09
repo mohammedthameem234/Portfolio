@@ -33,7 +33,6 @@ const HeroSection = () => {
   const loaderCounterRef = useRef(null);
   const stroke1Ref = useRef(null);
   const stroke2Ref = useRef(null);
-  const endLineRef = useRef(null);
   const parallaxInstanceRef = useRef(null);
   const [loaderDone, setLoaderDone] = useState(false);
 
@@ -47,18 +46,6 @@ const HeroSection = () => {
     gsap.set(headingChars, { autoAlpha: 0, y: 100 });
     gsap.set(imgRef.current, { autoAlpha: 0, y: "50%", scale: 0.8 });
     gsap.set([stroke1Ref.current, stroke2Ref.current], { autoAlpha: 0, width: "0%" });
-    gsap.set(endLineRef.current, { autoAlpha: 0 });
-
-    // Breaker line: invisible at the top of the page, fades in as the user
-    // scrolls down. Tied to scroll position via scrub so it tracks Lenis
-    // smooth-scroll precisely.
-    const endLineTrigger = ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: "top top",
-      end: "+=300",
-      scrub: true,
-      animation: gsap.to(endLineRef.current, { autoAlpha: 1, ease: "none" }),
-    });
 
     // iOS 13+ requires explicit permission to receive deviceorientation events.
     // parallax-js uses those events automatically on mobile (gyroscope mode),
@@ -186,7 +173,6 @@ const HeroSection = () => {
 
     return () => {
       tl.kill();
-      endLineTrigger.kill();
       if (parallaxInstanceRef.current) {
         try {
           parallaxInstanceRef.current.destroy();
@@ -202,9 +188,11 @@ const HeroSection = () => {
   return (
     <>
       {/* Loader */}
-      <div id="loader" ref={loaderRef}>
-        <div id="loader-counter" ref={loaderCounterRef}>0</div>
-      </div>
+      {!loaderDone && (
+        <div id="loader" ref={loaderRef}>
+          <div id="loader-counter" ref={loaderCounterRef}>0</div>
+        </div>
+      )}
 
       {/* Hero — direct children of #hero-section are parallax layers.
           Each layer's `data-depth` controls how much it moves with the cursor. */}
@@ -240,14 +228,14 @@ const HeroSection = () => {
         {/* Heading text (deepest, moves least) */}
         <div className="hero-layer" data-depth="0.10" style={{ zIndex: 5 }}>
           <div id="hero-heading" ref={headingRef}>
-            <SplitChars text="ELFEKKY" />
+            <SplitChars text="THAMEEM" />
           </div>
         </div>
 
         {/* Portrait image (foreground, moves more) */}
         <div className="hero-layer" data-depth="0.50" style={{ zIndex: 10 }}>
           <div id="hero-img" ref={imgRef}>
-            <img src="/Portfolio_Img-4.png" alt="" draggable="false" />
+            <img src="/profile-suit-portrait-nobg.png" alt="Mohammed Thameem" draggable="false" />
           </div>
         </div>
 
@@ -257,9 +245,6 @@ const HeroSection = () => {
             <img src="/Svg_Stroke.png" alt="" draggable="false" />
           </div>
         </div>
-
-        {/* End-of-hero indicator line */}
-        <div className="hero-end-line" ref={endLineRef}></div>
       </div>
     </>
   );

@@ -84,7 +84,7 @@ const ThemeButton = () => {
       onClick={toggle}
       aria-label="Toggle theme"
       aria-pressed={isDark}
-      className='nav_btn_lg nav_btn_light flex items-center justify-center hover:bg-brblue py-6 cursor-pointer'
+      className="nav_btn_light flex items-center justify-center h-10 px-4 rounded-full hover:bg-brblue transition-colors text-xs font-semibold tracking-wider whitespace-nowrap cursor-pointer"
     >
       {isDark ? <SunIcon /> : <MoonIcon />}
       {label}
