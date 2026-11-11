@@ -15,3 +15,10 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+
+// Enable static export for easy deployment
+nextConfig.output = 'export';
+
+// Enable static export for easy deployment
+/** @type {'export'|'standalone'} */
+nextConfig.output = 'export';
